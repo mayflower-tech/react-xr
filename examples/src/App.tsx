@@ -51,7 +51,7 @@ function Dots() {
       <div className={demoDots}>
         {Object.entries(visibleComponents).map(function mapper([name, item]) {
           const background = params.name === name ? 'salmon' : '#fff'
-          return <Link className={dot} key={name} to={`/demo/${name}`} style={{ background }} />
+          return <Link className={dot} aria-label={`${name} demo`} key={name} to={`/demo/${name}`} style={{ background }} />
         })}
       </div>
       <div className={demoName}>{params.name}</div>
